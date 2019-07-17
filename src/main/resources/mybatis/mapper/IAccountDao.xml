@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hecdu.springboot.first.mapper.IAccountDao">
+    <insert id="save">
+        insert into t_account(serialNo,pinCode,balance,owner)
+            values(#{serialNo},#{pinCode},#{balance},#{owner})
+    </insert>
+
+    <delete id="delete">
+        delete from t_account where id=#{id}
+    </delete>
+    
+    <update id="update" parameterType="Account">
+        update t_account set serialNo=#{serialNo},pinCode=#{pinCode},
+                balance=#{balance},owner=#{owner} where id=#{id}
+    </update>
+
+    <select id="findById"  resultType="Account">
+        select * from t_account where id=#{id}
+    </select>
+
+    <select id="findAll" resultType="account">
+        select * from t_account
+    </select>
+</mapper>

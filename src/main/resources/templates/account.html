@@ -1,0 +1,52 @@
+
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <form action="/account/deposit">
+
+            <p>
+                账号：<input type="number" name="id">
+            </p>
+            <p>
+                存款金额：<input type="number" name="money">
+            </p>
+            <p>
+                <input type="submit" value="存钱">
+            </p>
+        </form>
+        <hr/>
+        <form action="/account/withdraw">
+
+            <p>
+               账号： <input type="number" name="id">
+            </p>
+            <p>
+               取款金额： <input type="number" name="money">
+            </p>
+            <p>
+                <input type="submit" value="取钱">
+            </p>
+        </form>
+        <hr/>
+        <form action="/account/transfor">
+
+            <p>
+                源账户：<input type="number" name="from">
+            </p>
+            <p>
+               目标账户： <input type="number" name="to">
+            </p>
+            <p>
+                转账金额：<input type="number" name="money">
+            </p>
+            <p>
+                <input type="submit" value="转账">
+            </p>
+        </form>
+        <hr/>
+    </div>
+</body>
+</html>

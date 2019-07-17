@@ -1,0 +1,25 @@
+server:
+  port: 8899
+  servlet:
+    context-path: /
+    #config xonnecction properties
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/springdemo?useUnicode=true&useSSL=false&serverTimezone=UTC&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+   #thymeleaf
+  thymeleaf:
+    cache: false
+    encoding: utf-8
+    mode: html
+    servlet:
+      content-type: text/html
+#mybatis configration
+mybatis:
+  mapper-locations: classpath*:mybatis/mapper/**/*.xml
+  type-aliases-package: package com.hecdu.springboot.first.entity;
+
+
+
